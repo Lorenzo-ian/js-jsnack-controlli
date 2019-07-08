@@ -7,10 +7,13 @@ var numero, listarray;
 listarray = []
 //Chiedo all'utente 6 volte un numero se dispari il numero va nell'array
 
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 6; i++) {
     numero = parseInt(prompt ("Dimmi un numero!"));
-   
-    if (numero %2 !== 0 ) {
+    
+    if (Number.isNaN(numero)) {
+        alert("Devi inserire solo numeri");
+        i = i-1;
+    } else if (numero %2 !== 0 ) {
         listarray.push(numero);
         console.log(numero);
     }
